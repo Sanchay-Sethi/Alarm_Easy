@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/appbg"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.Light">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F63D43"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            >
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    <com.google.android.material.appbar.AppBarLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="top"-->
+    <!--        >-->
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/toolbar_main"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="?attr/actionBarSize"-->
+    <!--            >-->
+    <!--        </androidx.appcompat.widget.Toolbar>-->
+
+    <!--    </com.google.android.material.appbar.AppBarLayout>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Your Alarm Easily"
+        android:textAlignment="center"
+        android:background="#FBCDCD"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Time : "
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+        <DigitalClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Your Alarm Time : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeShow"
+            android:text="0:00 AM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/choose_time"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Choose Time"
+            android:layout_marginTop="50dp"
+            app:cornerRadius="10dp"
+            android:textColor="@color/white"
+            android:elevation="10dp"
+            android:drawableLeft="@drawable/time"
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+        <LinearLayout
+            android:id="@+id/alarm_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/set_alarm"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Set Alarm"
+                android:layout_marginTop="10dp"
+                app:cornerRadius="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/white"
+                android:backgroundTint="#E91E63"
+                android:elevation="10dp"
+                android:drawableLeft="@drawable/alarmset"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_alarm"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel ?"
+                android:layout_marginTop="10dp"
+                app:cornerRadius="10dp"
+                android:backgroundTint="#F60303"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/white"
+                android:elevation="10dp"
+                android:drawableLeft="@drawable/cancel"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
